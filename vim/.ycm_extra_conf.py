@@ -5,7 +5,7 @@ import ycm_core
 
 myFlags = [
     '-Wall',
-    '-std=c++11',
+    '-std=c++14',
     '-stdlib=libc++',
     '-x','c++',
     '-I','.' 
