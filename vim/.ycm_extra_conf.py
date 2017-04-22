@@ -5,8 +5,8 @@ import ycm_core
 
 myFlags = [
     '-Wall',
-    '-std=c++14',
-    '-stdlib=libc++',
+    '-std=c++11',
+    '-stdlib=libstdc++',
     '-x','c++',
     '-I','.' 
 ]
@@ -95,7 +95,7 @@ def GetCompilationInfoForFile( filename ):
 
 
 def FlagsForFile( filename, **kwargs ):
-  final_flags = LoadSystemIncludes() + myFlags 
+  final_flags = myFlags + LoadSystemIncludes() 
   if database:
     # Bear in mind that compilation_info.compiler_flags_ does NOT return a
     # python list, but a "list-like" StringVec object
