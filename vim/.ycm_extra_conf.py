@@ -5,6 +5,7 @@ import ycm_core
 
 myFlags = [
     '-Wall',
+    '-Wnon-virtual-dtor',
     '-std=c++11',
     '-stdlib=libstdc++',
     '-x','c++',
