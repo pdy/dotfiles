@@ -44,6 +44,11 @@ set expandtab
 set number
 "set relativenumber
 
+if has('gui_running')
+    set background=dark
+    colorscheme solarized
+endif
+
 autocmd vimrc BufEnter *.gradle setf groovy
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
