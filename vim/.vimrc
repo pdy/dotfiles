@@ -1,5 +1,16 @@
 set nocompatible
 
+set exrc
+set secure
+
+set backspace=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set number
+"set relativenumber
+
 filetype off
 syntax off
 
@@ -25,6 +36,12 @@ augroup vimrc
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       turn off sounds and visuals                       "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                        turn on filetype plugins                         "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -33,17 +50,9 @@ augroup END
 filetype plugin indent on
 syntax on
 
-set exrc
-set secure
-
-set backspace=2
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set number
-"set relativenumber
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                        with gvim use solarized black                    "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
     set background=dark
     colorscheme solarized
