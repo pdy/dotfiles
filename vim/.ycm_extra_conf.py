@@ -4,7 +4,7 @@ import subprocess
 import ycm_core
 
 myFlags = [
-    '-Wall',
+    '-Weverything',
     '-Wnon-virtual-dtor',
     '-std=c++11',
     '-stdlib=libstdc++',
