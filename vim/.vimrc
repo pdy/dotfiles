@@ -51,12 +51,18 @@ filetype plugin indent on
 syntax on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                        with gvim use solarized black                    "
+"                        gvim sepcific settings                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
     set background=dark
     colorscheme solarized
+
+    set guifont=Monospace\ 12
 endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                        treat .gradle as groovy                          "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd vimrc BufEnter *.gradle setf groovy
 
