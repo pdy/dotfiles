@@ -19,8 +19,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'moll/vim-node'
+"Plugin 'ternjs/tern_for_vim'
+"Plugin 'moll/vim-node'
 Plugin 'scrooloose/nerdTree'
 
 call vundle#end()
