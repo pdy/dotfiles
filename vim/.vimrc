@@ -4,9 +4,9 @@ set exrc
 set secure
 
 set backspace=2
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set number
 "set relativenumber
@@ -89,7 +89,7 @@ let g:ycm_confirm_extra_conf = 0
 
 let g:ycm_cache_omnifunc = 1
 
-let g:ycm_min_num_of_chars_for_completion = 0
+let g:ycm_min_num_of_chars_for_completion = 3
 
 "let g:ycm_min_num_identifier_candidate_chars = 0
 
@@ -109,5 +109,6 @@ let g:ycm_server_log_level = 'error'
 nnoremap <F4> :YcmDiags<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gi :YcmCompleter GoToInclude<CR>
 nnoremap <leader>fi :YcmCompleter FixIt<CR>
