@@ -42,6 +42,15 @@ set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       regexp engine                                     "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if v:version >= 704
+  " Current regexp engine is pretty slow.
+  " Consider removing it when it becomes faster.
+  set regexpengine=1
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                        turn on filetype plugins                         "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
