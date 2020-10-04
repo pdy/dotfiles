@@ -9,6 +9,7 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set number
+set nowrap
 "set relativenumber
 
 filetype off
