@@ -14,6 +14,8 @@ set number
 filetype off
 syntax off
 
+set rtp+=/usr/bin/fzf
+
 " Setup vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -22,8 +24,16 @@ Plugin 'Valloric/YouCompleteMe'
 "Plugin 'ternjs/tern_for_vim'
 "Plugin 'moll/vim-node'
 Plugin 'scrooloose/nerdTree'
+Plugin 'junegunn/fzf'
 
 call vundle#end()
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                           fzf fuzzy find                                "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nmap <C-P> :FZF<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           reset vimrc augroup                           "
@@ -79,9 +89,9 @@ autocmd vimrc BufEnter *.gradle setf groovy
 "                        NERDTre  settings                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" autocmd vimenter * if &filetype ==# 'javascript' || &filetype ==# 'cpp' || &filetype ==# 'c' | NERDTree | endif
-nnoremap <leader>nd :NERDTree<CR>
+"autocmd vimenter * if &filetype ==# 'javascript' || &filetype ==# 'cpp' || &filetype ==# 'c' | NERDTree | endif
 let NERDTreeQuitOnOpen=1
+nnoremap <leader>nd :NERDTree<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                          TERN settings                                  "
@@ -94,7 +104,8 @@ let g:tern_map_keys=1
 "                        YouCompleteMe settings                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:ycm_goto_buffer_command = 'vertical-split'
+"let g:ycm_goto_buffer_command = 'vertical-split'
+let g:ycm_goto_buffer_command = 'split'
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
 
@@ -102,10 +113,10 @@ let g:ycm_cache_omnifunc = 1
 
 let g:ycm_min_num_of_chars_for_completion = 3
 
-"let g:ycm_min_num_identifier_candidate_chars = 0
+let g:ycm_min_num_identifier_candidate_chars = 3
 
-let g:ycm_filetype_whitelist = { 'h': 1,'cpp' : 1,'javascript' : 1 }
-"let g:ycm_filetype_whitelist = { 'h': 1,'cpp' : 1 }
+"let g:ycm_filetype_whitelist = { 'h': 1,'cpp' : 1,'javascript' : 1 }
+let g:ycm_filetype_whitelist = { 'h': 1,'cpp' : 1 }
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
 
