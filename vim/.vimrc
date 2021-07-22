@@ -9,7 +9,6 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set number
-set nowrap
 "set relativenumber
 
 filetype off
@@ -17,17 +16,15 @@ syntax off
 
 set rtp+=/usr/bin/fzf
 
-" Setup vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-"Plugin 'ternjs/tern_for_vim'
-"Plugin 'moll/vim-node'
-Plugin 'scrooloose/nerdTree'
-Plugin 'junegunn/fzf'
+call plug#begin()
 
-call vundle#end()
+Plug 'ycm-core/YouCompleteMe'
+"Plug 'ternjs/tern_for_vim'
+"Plug 'moll/vim-node'
+Plug 'scrooloose/nerdTree'
+Plug 'junegunn/fzf'
+
+call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
