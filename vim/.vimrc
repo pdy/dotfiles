@@ -8,9 +8,9 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-set number
+"set number
 "set relativenumber
-
+set number relativenumber "hybrid
 filetype off
 syntax off
 
@@ -102,16 +102,17 @@ let g:tern_map_keys=1
 "                        YouCompleteMe settings                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+let g:ycm_auto_hover=''
+
 "let g:ycm_goto_buffer_command = 'vertical-split'
 let g:ycm_goto_buffer_command = 'split'
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
 
-let g:ycm_cache_omnifunc = 1
+" let g:ycm_cache_omnifunc = 1 // default 1
 
-let g:ycm_min_num_of_chars_for_completion = 3
-
-let g:ycm_min_num_identifier_candidate_chars = 3
+let g:ycm_min_num_of_chars_for_completion = 3 " default 1
+let g:ycm_min_num_identifier_candidate_chars = 3 " default 2
 
 "let g:ycm_filetype_whitelist = { 'h': 1,'cpp' : 1,'javascript' : 1 }
 let g:ycm_filetype_whitelist = { 'h': 1,'cpp' : 1 }
@@ -120,10 +121,6 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
-"let g:ycm_key_list_select_completion=[]
-"let g:ycm_key_list_previous_completion=[]
-
-"let g:ycm_server_use_vim_stdout = 1
 let g:ycm_server_log_level = 'error'
 
 nnoremap <F4> :YcmDiags<CR>
