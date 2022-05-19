@@ -11,6 +11,8 @@ set expandtab
 "set number
 "set relativenumber
 set number relativenumber "hybrid
+set scrolloff=9999
+
 filetype off
 syntax off
 
@@ -88,7 +90,7 @@ autocmd vimrc BufEnter *.gradle setf groovy
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "autocmd vimenter * if &filetype ==# 'javascript' || &filetype ==# 'cpp' || &filetype ==# 'c' | NERDTree | endif
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
 nnoremap <leader>nd :NERDTree<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -104,8 +106,8 @@ let g:tern_map_keys=1
 
 let g:ycm_auto_hover=''
 
-"let g:ycm_goto_buffer_command = 'vertical-split'
-let g:ycm_goto_buffer_command = 'split'
+let g:ycm_goto_buffer_command = 'vertical-split'
+"let g:ycm_goto_buffer_command = 'split'
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
 
@@ -114,8 +116,8 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_min_num_of_chars_for_completion = 3 " default 1
 let g:ycm_min_num_identifier_candidate_chars = 3 " default 2
 
-"let g:ycm_filetype_whitelist = { 'h': 1,'cpp' : 1,'javascript' : 1 }
-let g:ycm_filetype_whitelist = { 'h': 1,'cpp' : 1 }
+let g:ycm_filetype_whitelist = { 'h': 1,'cpp' : 1, 'c' : 1, 'javascript' : 1 }
+"let g:ycm_filetype_whitelist = { 'h': 1,'cpp' : 1, 'c' : 1 }
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
 
