@@ -11,7 +11,7 @@ set expandtab
 "set number
 "set relativenumber
 set number relativenumber "hybrid
-set scrolloff=9999
+set scrolloff=20
 
 filetype off
 syntax off
