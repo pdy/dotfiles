@@ -92,6 +92,7 @@ autocmd vimrc BufEnter *.gradle setf groovy
 "autocmd vimenter * if &filetype ==# 'javascript' || &filetype ==# 'cpp' || &filetype ==# 'c' | NERDTree | endif
 let NERDTreeQuitOnOpen=0
 nnoremap <leader>nd :NERDTree<CR>
+nnoremap <leader>ndf :NERDTreeFind<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                          TERN settings                                  "
@@ -130,4 +131,6 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gi :YcmCompleter GoToInclude<CR>
+nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
+nnoremap <leader>gu :YcmCompleter GoToCallers<CR>
 nnoremap <leader>fi :YcmCompleter FixIt<CR>
