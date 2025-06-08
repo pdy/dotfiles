@@ -11,7 +11,8 @@ flags = [
     '-Weverything',
     '-Wno-c++98-compat',
     '-Wno-c++98-compat-pedantic',
-    '-std=c++14',
+    '-Wno-padded',
+    '-std=c++20',
     '-stdlib=libstdc++',
     '-x','c++',
 ]
